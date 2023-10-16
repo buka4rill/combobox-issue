@@ -1,0 +1,16 @@
+@import '@fontsource/montserrat/400.css';
+@import '@fontsource/montserrat/700.css';
+
+html,
+body,
+#root {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-width: 320px;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
