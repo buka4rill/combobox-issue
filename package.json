@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@coachhubio/nova": "^3.0.0",
+    "@coachhubio/nova": "^3.17.2",
     "@fontsource/montserrat": "^5.0.0",
     "formik": "^2.2.9",
     "react": "^18.2.0",
