@@ -2,16 +2,22 @@
   "name": "nova-issue-report-template",
   "license": "MIT",
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite --force",
     "build": "tsc && vite build --outDir=docs --base=/{REPLACE_THIS_WITH_THE_REPO_NAME}/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "gen:types": "npx apollo client:codegen --target typescript --includes **/*.graphql.ts --excludes **/__generated__",
+    "gen": "graphql-codegen"
   },
   "dependencies": {
-    "@coachhubio/nova": "^3.19.0",
+    "@apollo/client": "^3.8.6",
+    "@coachhubio/nova": "^3.23.0",
+    "@coachhubio/nova-combobox": "^1.12.1",
     "@fontsource/montserrat": "^5.0.0",
     "formik": "^2.2.9",
+    "graphql": "^16.8.1",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
@@ -19,11 +25,14 @@
     "use-local-storage-state": "^19.0.4"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/client-preset": "^4.1.0",
+    "@types/lodash": "^4.14.200",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^4.0.0",
-    "typescript": "^5.0.0",
+    "typescript": "^5.2.2",
     "vite": "^4.0.0"
   },
   "prettier": {
